@@ -1,0 +1,120 @@
+<!doctype html>
+<html class="no-js">
+
+	<head>
+		<meta charset="utf-8">
+		<title>CAS FEE_CloneIT3</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+		<link rel="stylesheet" href="styles/main.css">
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="bower_components/modernizr/modernizr.js"></script>
+	</head>
+
+
+	<body>
+
+		<!--Header                  -->
+		<header>
+			<div class="row" id="top-nav">
+				<div class="small-4 columns">
+					<img id="logo" src="images/cloneit-logo.png" alt="Logo CloneIT"/>
+				</div>
+				<div class="small-8 columns" id="small-nav">
+					<ul>
+						<li><a href="#"><img id="profile-pic" src="images/face.png" alt="Profile Pic"/></a></li>
+					</ul>
+					<a href="#" id="show-nav">Add new link</a>
+				</div>
+			</div>
+			<div class="row" id="big-nav">
+				<div class="small-11 medium-5 columns">
+					<input id="text-input" placeholder="Please enter a text" type="text"/>
+					<input id="link-input" placeholder="Please enter a link" type="text"/>
+					<a class="links-sidebar" id="new-link" href="#">Add New Link</a>
+				</div>
+				<div class="small-1 columns">
+				</div>
+				<div class="small-12 medium-6 columns" id="header-links">
+					<ul>
+						<li><a href="#">Michael Mayer</a></li>
+						<li><a href="#">My Links</a></li>
+						<li><a href="#">My Saves</a></li>
+						<li><a href="#">My Ratings</a></li>
+					</ul>
+				</div>
+			</div>
+		</header>
+
+		<div id="filters">
+			<div class="small-block-grid-2 medium-block-grid-4 large-block-grid-8 bg-lightblue">
+				<li class="filter"><a href="#">TRENDING</a></li>
+				<li class="filter"><a href="#">NEWEST</a></li>
+				<li class="filter"><a href="#">Animals</a></li>
+				<li class="filter"><a href="#">Fun</a></li>
+				<li class="filter"><a href="#">Scary</a></li>
+				<li class="filter"><a href="#">Movies</a></li>
+				<li class="filter"><a href="#">Games</a></li>
+				<li class="filter"><a href="#">Nature</a></li>
+			</div>
+		</div>
+
+
+		<!--Hidden Template Post                 -->
+		<div class="hidden">
+			<div id="template-post" class="item post">
+				<a class="post-pic" href="#"><img src="images/husky.png" alt="husky"/>
+
+					<p class="post-title">The best cat pics ever</p>
+				</a>
+				<hr/>
+				<ul>
+					<li><a data-function="upvote" class="icon-arrow-up" href="#"></a></li>
+					<li><a data-function="downvote" class="icon-arrow-down" href="#"></a></li>
+					<li><a data-function="show-comments" class="icon-bubble" href="#"></a></li>
+					<li><a data-function="delete" class="icon-close" href="#"></a></li>
+				</ul>
+
+
+				<!--Hidden Template Comment        -->
+				<div class="row hidden">
+					<!--<hr/>-->
+					<div class="small-12 columns comments">
+						<div class="comments-text">
+							<!--Comments are inserted here        -->
+						</div>
+
+						<div class="row">
+							<div class="small-12 columns comment-box">
+								<input placeholder="Please enter a comment" type="text"/>
+							</div>
+							<br/>
+
+							<div class="small-12 columns link-box">
+								<a class="comment-button" href="#">Comment</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="content" id="fullwidth">
+			<div id="container">
+
+
+			</div>
+		</div>
+
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<script src="bower_components/isotope/dist/isotope.pkgd.min.js"></script>
+		<script src="bower_components/imagesloaded/imagesloaded.js"></script>
+		<script src="bower_components/foundation/js/foundation.js"></script>
+		<script src="scripts/app.js"></script>
+		<script src="scripts/main.js"></script>
+	</body>
+</html>

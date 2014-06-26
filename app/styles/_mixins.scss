@@ -1,0 +1,25 @@
+/* MY OWN MIXINS
+##################################################################################################################### */
+@mixin animation($effect-time-loop...){
+	-webkit-animation: $effect-time-loop;
+	-moz-animation: $effect-time-loop;
+	-ms-animation: $effect-time-loop;
+	-o-animation: $effect-time-loop;
+	animation: $effect-time-loop;
+}
+
+@mixin animation-delay ($delaytime){
+	-webkit-animation-delay: $delaytime;
+	-moz-animation-delay: $delaytime;
+	-ms-animation-delay: $delaytime;
+	-o-animation-delay: $delaytime;
+	animation-delay: $delaytime;
+}
+
+@mixin border-radius ($radius:10px){
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  -o-border-radius: $radius;
+  border-radius: $radius;
+}

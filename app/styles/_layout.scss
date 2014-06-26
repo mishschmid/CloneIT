@@ -1,0 +1,66 @@
+//Some general overall style setting used troughout the whole project
+//**********************************************************************************************************************
+
+* {
+
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box; /* Firefox, other Gecko */
+	box-sizing: border-box;
+}
+
+.row {
+	max-width: 100% !important;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+//	background-color: $secondary-color;
+	background-color: white;
+
+}
+
+p {
+	font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+a {
+	color: $fourth-color;
+}
+
+.item {
+	width: 100%;
+	min-width: 200px;
+
+	@media (min-width: 401px) {
+		width: 50%;
+	}
+	@media (min-width: 600px) {
+		width: 33%;
+	}
+	@media (min-width: 1000px) {
+		width: 20%;
+	}
+}
+.post {
+	&.first-bg {
+		background-color: $primary-bg-color;
+	}
+	&.second-bg {
+		background-color: $secondary-bg-color;
+	}
+	&.third-bg {
+		background-color: $third-bg-color;
+	}
+	&.fourth-bg {
+		background-color: $fourth-bg-color;
+	}
+	&.fifth-bg {
+		background-color: $fifth-bg-color;
+	}
+}
+
+

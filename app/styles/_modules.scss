@@ -1,0 +1,157 @@
+//Some general overall style setting used troughout the whole project
+//**********************************************************************************************************************
+
+.post {
+	//  margin: 20px 0;
+	border: 1px solid $fifth-color;
+	padding: 5px;
+	background-color: $primary-color;
+	overflow: hidden;
+	li {
+		font-size: emCalc(12px);
+		text-decoration: none;
+		display: inline-block;
+		padding-right: 1.6em;
+	}
+	ul {
+		margin-bottom: 0;
+		line-height: 0.5em;
+		float: right;
+	}
+	hr {
+		margin-bottom: 5px;
+	}
+	img {
+		opacity: 0.5;
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+.post-pic {
+	img {
+		height: 100px;
+		width: 100px;
+		margin: 0 5px 5px 0;
+		float: left;
+		opacity: 1;
+	}
+}
+
+a.post-pic {
+	display: block;
+}
+
+.post-title {
+	font-size: emCalc(18px);
+	height: 85px;
+	display: inline;
+	margin-bottom: 5px;
+}
+
+.profile {
+	margin: 20px 0;
+	border: 1px solid $fifth-color;
+	overflow: hidden;
+	padding: 5px;
+	box-shadow: 3px 3px $fifth-color;
+	img {
+		margin: 0 auto;
+	}
+	a {
+		font-size: emCalc(14px);
+		display: block;
+	}
+	hr {
+		margin: 0.25em;
+	}
+	p {
+		font-size: 1.2em;
+		font-weight: 600;
+	}
+}
+
+.links-sidebar {
+	display: block;
+	text-align: center;
+	background-color: $third-color;
+	border: 1px solid $fifth-color;
+	padding: 0.6em;
+	margin-bottom: 10px;
+	&:hover {
+		background-color: $primary-color;
+		color: $secondary-color;
+	}
+	input#text-input, #link-input {
+		margin-bottom: 0.5em;
+	}
+}
+
+#new-link {
+	color: $sixth-color;
+	width: 139px;
+	margin-top: 10px;
+}
+
+.position-fixed {
+	position: fixed;
+	top: -18px;
+	right: 64px;
+	width: 250px;
+}
+
+.comments {
+	z-index: 2;
+	hr {
+		margin: 5px;
+	}
+	p {
+		margin: 10px 0 10px 0;
+		padding: 0 5px 0 5px;
+	}
+	input[type="text"] {
+		margin-bottom: 0;
+		padding: 0 5px;
+		width: 100%;
+		height: 40px;
+		font-size: 1em;
+	}
+//	background-color: $primary-color;
+	&.columns {
+		padding: 0;
+		margin-top: 4px;
+		padding-bottom: 10px;
+
+	}
+	.row {
+		margin: 0;
+	}
+	.columns {
+		padding: 0;
+	}
+}
+
+.comment-box {
+	width: 100%;
+}
+
+.comment-button {
+	color: $sixth-color;
+	font-weight: 600;
+	position: relative;
+	display: inline-block;
+	float: right;
+	right: 2px;
+	top: 8px;
+	margin-bottom: 10px;
+	border: 1px solid $fifth-color;
+	background-color: $third-color;
+	text-align: center;
+	padding: 0.6em 1.1em;
+	box-shadow: 3px 3px $fifth-color;
+}
+
+.icon-arrow-up {
+	float: left;
+}
