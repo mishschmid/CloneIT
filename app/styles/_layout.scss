@@ -29,6 +29,9 @@ h1 {
 
 a {
 	color: $fourth-color;
+	&:hover {
+		color: #2980B9;
+	}
 }
 
 .item {
@@ -61,6 +64,21 @@ a {
 	&.fifth-bg {
 		background-color: $fifth-bg-color;
 	}
+//	&.sixth-bg {
+//		background-color: $sixth-bg-color;
+//	}
+//	&.seventh-bg {
+//		background-color: $seventh-bg-color;
+//	}
+//	&.eighth-bg {
+//		background-color: $eighth-bg-color;
+//	}
+//	&.ninth-bg {
+//		background-color: $ninth-bg-color;
+//	}
+//	&.tenth-bg {
+//		background-color: $tenth-bg-color;
+//	}
 }
 
 

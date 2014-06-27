@@ -92,6 +92,9 @@ a.post-pic {
 	color: $sixth-color;
 	width: 139px;
 	margin-top: 10px;
+    &:hover {
+      color: $fourth-color;
+    }
 }
 
 .position-fixed {
@@ -144,14 +147,24 @@ a.post-pic {
 	float: right;
 	right: 2px;
 	top: 8px;
-	margin-bottom: 10px;
+	margin-bottom: 2px;
 	border: 1px solid $fifth-color;
 	background-color: $third-color;
 	text-align: center;
 	padding: 0.6em 1.1em;
 	box-shadow: 3px 3px $fifth-color;
+	&:hover {
+      background-color: $primary-color;
+      color: $fourth-color;
+	}
 }
 
 .icon-arrow-up {
 	float: left;
+}
+
+.vote-number {
+  letter-spacing: 0;
+  position: relative;
+  left: 12px;
 }

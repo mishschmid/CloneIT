@@ -126,12 +126,20 @@ var generateNewLink = function generateNewLink() {
 	}
 };
 
+
+//*************************************************************************
+// LOAD LINK DATA - Load the data from linkList object and initialize posts
+//*************************************************************************
 var loadLinkData = function (linkList) {
-	var background_counter = -1;
-	var background_list = ['first-bg', 'second-bg', 'third-bg', 'fourth-bg', 'fifth-bg']
+
+    //We need this counter to set background colors of the post
+	var background_counter = 0;
+	var background_list = ['first-bg', 'second-bg', 'third-bg', 'fourth-bg', 'fifth-bg', 'sixth-bg', 'seventh-bg', 'eighth-bg', 'ninth-bg', 'tenth-bg']
+
+    //
 	for (var i = CurrentLoadCount; i < linkList.length; i++) {
-		background_counter++;
-		if (background_counter > 3) {
+
+		if (background_counter >= 5) {
 			background_counter = 0
 		}
 
@@ -144,6 +152,7 @@ var loadLinkData = function (linkList) {
 		$clone.find('.post-pic img').attr('src', linkList[i].picurl);
 		$clone.find('a[data-function]').addClass(i);
 		$('#container').prepend($clone).isotope('reloadItems').isotope({sortBy: 'original-order'});
+        background_counter++;
 	}
 
 	CurrentLoadCount = linkList.length;
@@ -177,7 +186,7 @@ var voteUp = function (e) {
     var postID = $(e.currentTarget).parent().parent().parent().attr('id');
     linkList[postID].ups++;
     var ups = linkList[postID].ups;
-    $(e.currentTarget).before().text(ups);
+    $(e.currentTarget).before().html('<span class="vote-number">'+ups+'</span>');
 };
 
 
@@ -189,7 +198,7 @@ var voteDown = function (e) {
     console.log(linkList[postID]);
     linkList[postID].downs++;
     var downs = linkList[postID].downs;
-    $(e.currentTarget).prepend().text(downs);
+    $(e.currentTarget).prepend().html('<span class="vote-number">'+downs+'</span>');
 };
 
 
