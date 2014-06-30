@@ -46,7 +46,6 @@ var postComment = function postComment(e){
 
 	//Save input value to newLink object
 	linkList[postID].comment.push(newComment);
-	console.log(linkList[postID].comment);
 
 	//Call the showComments function to show the new comment, then adapt layout
 	showComments(postID);
@@ -183,7 +182,7 @@ var addCommentbyKey = function(){
 // VOTE UP
 //***********************************************
 var voteUp = function (e) {
-    var postID = $(e.currentTarget).parent().parent().parent().attr('id');
+    var postID = $(e.currentTarget).closest('.item').attr('id');
     linkList[postID].ups++;
     var ups = linkList[postID].ups;
     $(e.currentTarget).before().html('<span class="vote-number">'+ups+'</span>');
@@ -194,8 +193,7 @@ var voteUp = function (e) {
 // VOTE DOWN
 //***********************************************
 var voteDown = function (e) {
-    var postID = $(e.currentTarget).parent().parent().parent().attr('id');
-    console.log(linkList[postID]);
+    var postID = $(e.currentTarget).closest('.item').attr('id');
     linkList[postID].downs++;
     var downs = linkList[postID].downs;
     $(e.currentTarget).prepend().html('<span class="vote-number">'+downs+'</span>');
@@ -208,6 +206,17 @@ var voteDown = function (e) {
 var showNavigation = function() {
     $('#big-nav').toggle(300);
 };
+
+
+//***********************************************
+// CHANGE THEME
+//***********************************************
+//var changeTheme = function(e) {
+//    if (e.currentTarget.attr('class') === 'theme usa' ){
+//        first-bg {
+//            background-color: $primary-bg-color;
+//    };
+//};
 
 
 
@@ -246,6 +255,21 @@ $(document).ready(function(){
 //8. SHOW NAVIGATION
     $('#show-nav').on('click', showNavigation);
 	$('#profile-pic').on('click', showNavigation);
+
+//9. CHANGE THEME
+    $('#cookie').on('click', function(e){
+		e.preventDefault();
+		setActiveStyleSheet('default');
+	});
+
+	$('#usa').on('click', function(e){
+		e.preventDefault();
+		setActiveStyleSheet('usa');
+	});
+	$('#sahara').on('click', function(e){
+		e.preventDefault();
+		setActiveStyleSheet('sahara');
+	});
 });
 
 

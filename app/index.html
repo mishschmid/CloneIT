@@ -7,7 +7,10 @@
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-		<link rel="stylesheet" href="styles/main.css">
+		<link rel="stylesheet" href="styles/main.css" type="text/css">
+		<link rel="stylesheet" href="styles/cookie-theme.css" type="text/css">
+		<link rel="alternate stylesheet" href="styles/usa-theme.css" type="text/css" title="usa">
+		<link rel="alternate stylesheet" href="styles/sahara-theme.css" type="text/css" title="sahara">
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
 		<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -31,21 +34,18 @@
 				</div>
 			</div>
 			<div class="row" id="big-nav">
-				<div class="small-11 medium-5 columns">
+				<div class="small-12 medium-6 medium-push-6 columns" id="header-links">
+					<ul>
+						<li><a>Michael Mayer</a></li>
+						<li><a href="#">My Links</a><a href="" id="cookie"><span id="cookie1" class="theme-color"></span><span id="cookie2" class="theme-color"></span><span id="cookie3" class="theme-color"></span><span id="cookie4" class="theme-color"></span><span id="cookie5" class="theme-color"></span></a></li>
+						<li><a href="#">My Saves</a><a href="" id="usa"><span id="usa1" class="theme-color"></span><span id="usa2" class="theme-color"></span><span id="usa3" class="theme-color"></span><span id="usa4" class="theme-color"></span><span id="usa5" class="theme-color"></span></a></li>
+						<li><a href="#">My Ratings</a><a href="" id="sahara"><span id="sahara1" class="theme-color"></span><span id="sahara2" class="theme-color"></span><span id="sahara3" class="theme-color"></span><span id="sahara4" class="theme-color"></span><span id="sahara5" class="theme-color"></span></a></li>
+					</ul>
+				</div>
+				<div class="small-12 medium-6 medium-pull-6 columns">
 					<input id="text-input" placeholder="Please enter a text" type="text"/>
 					<input id="link-input" placeholder="Please enter a link" type="text"/>
 					<a class="links-sidebar" id="new-link" href="#">Add New Link</a>
-				</div>
-				<div class="small-1 columns">
-				</div>
-				<div class="small-12 medium-6 columns" id="header-links">
-					<ul>
-						<li><a href="#">Michael Mayer</a></li>
-						<li><a href="#">My Links</a></li>
-						<li><a href="#">My Saves</a></li>
-						<li><a href="#">My Ratings</a></li>
-					</ul>
-				</div>
 			</div>
 		</header>
 
@@ -116,5 +116,6 @@
 		<script src="bower_components/foundation/js/foundation.js"></script>
 		<script src="scripts/app.js"></script>
 		<script src="scripts/main.js"></script>
+		<script src="scripts/style-switcher.js"></script>
 	</body>
 </html>

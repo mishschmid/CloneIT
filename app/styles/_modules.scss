@@ -92,9 +92,13 @@ a.post-pic {
 	color: $sixth-color;
 	width: 139px;
 	margin-top: 10px;
-    &:hover {
-      color: $fourth-color;
-    }
+	float: left;
+	&:hover {
+		color: $fourth-color;
+	}
+	@media #{$small}{
+		float: none;
+	}
 }
 
 .position-fixed {
@@ -167,4 +171,14 @@ a.post-pic {
   letter-spacing: 0;
   position: relative;
   left: 12px;
+}
+
+.theme-color {
+	width: 15px;
+	height: 15px;
+	margin-left: 2px;
+	&:first-of-type {
+		margin-left: 20px;
+	}
+	display: inline-block;
 }

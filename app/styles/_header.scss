@@ -19,8 +19,6 @@ li.filter.block-grid {
   background: $third-color;
   border: 1px solid #444444;
   box-shadow: 3px 3px $fifth-color;
-//  padding: 0.2em;
-//  position: relative;
 
   a {
     color: $sixth-color;
@@ -42,10 +40,19 @@ li.filter.block-grid {
   }
 }
 
+.links-sidebar {
+	float: right;
+	@media #{$small}{
+		float: none;
+	}
+
+}
+
 .bg-lightblue {
   background-color: $primary-color;
 }
 #logo {
+  position: absolute;
   padding-top: 7px;
 }
 
@@ -75,24 +82,38 @@ li.filter.block-grid {
 }
 
 #big-nav {
-  display: none;
-  width: 1000px;
-  background-color: $primary-color;
-  margin-bottom: 1.5em;
-  input[type="text"] {
-    font-size: 1em;
-    width: 100%;
-    padding: 6px;
-    height: 40px;
-    margin-top: 10px;
-  }
+	text-align: left;
+	@media #{$small}{
+		text-align: left;
+	}
+	display: none;
+	width: 1000px;
+	background-color: $primary-color;
+	margin-bottom: 1.5em;
+	input[type="text"] {
+		font-size: 1em;
+		width: 100%;
+		max-width: 300px;
+		padding: 6px;
+		height: 40px;
+		margin-top: 10px;
+	}
 }
 #header-links {
-	border-left: 3px solid $sixth-color;
+	height: 124px;
+	border-bottom: 3px solid white;
+	padding-left: 8px;
+	@media #{$small}{
+		border-bottom: 0;
+		border-left: 3px solid $sixth-color;
+		height: 157px;
+	}
 	padding-bottom: 12px;
 	li {
 		list-style-type: none;
-		text-align:right;
+		text-align:left;
+		@media #{$small}{
+			text-align: right;}
 		&:first-child {
 			font-size: 1.5em;
 			font-weight: 700;
