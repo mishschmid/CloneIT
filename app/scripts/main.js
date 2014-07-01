@@ -23,7 +23,8 @@ function newLink (text, link, picurl, comment) {
 // ISOTOPE LAYOUT - Initialize the Isotope layout
 //***********************************************
 $(document).ready(function () {
-    var $container = $('#container')
+    setTimeout(function(){
+    var $container = $('#container');
 		// init
         $container.isotope({
             // options
@@ -32,6 +33,7 @@ $(document).ready(function () {
                 columnWidth: 0
             }
         });
+    },500);
     });
 
 
@@ -54,7 +56,7 @@ var postComment = function postComment(e){
 
 
 //**************************************************************************************************************
-// SHOW COMMENTS WITHOUT ID - Get the post ID - get & show the commments - then toggle the comments box
+// SHOW COMMENTS WITHOUT ID - Get the post ID - get & show the comments - then toggle the comments box
 //**************************************************************************************************************
 var showCommentsWithoutID = function showCommentsWithoutID(e){
 
@@ -71,7 +73,7 @@ var showCommentsWithoutID = function showCommentsWithoutID(e){
 var showComments = function (postID){
 	var currentComments = linkList[postID].comment;
 
-	//Clear the current commments-HTML
+	//Clear the current comments-HTML
 	$('#'+postID+' .comments-text').html('');
 
 	//Iterate over comments of linkList object to prepend comments
@@ -131,9 +133,9 @@ var generateNewLink = function generateNewLink() {
 //*************************************************************************
 var loadLinkData = function (linkList) {
 
-    //We need this counter to set background colors of the post
+    //We need this counter to set the background color of each post
 	var background_counter = 0;
-	var background_list = ['first-bg', 'second-bg', 'third-bg', 'fourth-bg', 'fifth-bg', 'sixth-bg', 'seventh-bg', 'eighth-bg', 'ninth-bg', 'tenth-bg']
+	var background_list = ['first-bg', 'second-bg', 'third-bg', 'fourth-bg', 'fifth-bg', 'sixth-bg', 'seventh-bg', 'eighth-bg', 'ninth-bg', 'tenth-bg'];
 
     //
 	for (var i = CurrentLoadCount; i < linkList.length; i++) {
@@ -150,8 +152,9 @@ var loadLinkData = function (linkList) {
 		$clone.find('a:first').attr('href', linkList[i].link);
 		$clone.find('.post-pic img').attr('src', linkList[i].picurl);
 		$clone.find('a[data-function]').addClass(i);
-		$('#container').prepend($clone).isotope('reloadItems').isotope({sortBy: 'original-order'});
+		$('#container').prepend($clone);
         background_counter++;
+        reloadLayout();
 	}
 
 	CurrentLoadCount = linkList.length;
@@ -208,20 +211,6 @@ var showNavigation = function() {
 };
 
 
-//***********************************************
-// CHANGE THEME
-//***********************************************
-//var changeTheme = function(e) {
-//    if (e.currentTarget.attr('class') === 'theme usa' ){
-//        first-bg {
-//            background-color: $primary-bg-color;
-//    };
-//};
-
-
-
-
-
 
 
 
@@ -257,7 +246,7 @@ $(document).ready(function(){
 	$('#profile-pic').on('click', showNavigation);
 
 //9. CHANGE THEME
-    $('#cookie').on('click', function(e){
+    $('#salmon').on('click', function(e){
 		e.preventDefault();
 		setActiveStyleSheet('default');
 	});
@@ -266,14 +255,11 @@ $(document).ready(function(){
 		e.preventDefault();
 		setActiveStyleSheet('usa');
 	});
-	$('#sahara').on('click', function(e){
+	$('#marine').on('click', function(e){
 		e.preventDefault();
-		setActiveStyleSheet('sahara');
+		setActiveStyleSheet('marine');
 	});
 });
-
-
-
 
 
 
@@ -345,15 +331,4 @@ var loadTestData = function() {
     linkList.push(newLink20);
 
     loadLinkData(linkList);
-
 };
-
-//***********************************************
-// SET BACKGROUND COLOR
-//***********************************************
-var setBackgroundColor = function() {
-
-	for (var i=0; i <= linkList.length; i++){
-		var postID = $('#'+i).addClass('primary-color')
-	}
-}
