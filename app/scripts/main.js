@@ -330,5 +330,38 @@ var loadTestData = function() {
     var newLink20 = new newLink('Do dogs of one breed prefer to be with their own breed?','http://http://moodle.hsr.ch/', 'images/husky.png', ['Soddom & Gomorroha', 'Heitere Fahne', 'Immer diese Kommentare, das kann einem ja echt auf den Sack gehen', 'Jetzt aber mal halblang']);
     linkList.push(newLink20);
 
+	var newLink21 = new newLink('Do dogs of one breed prefer to be with their own breed?', 'http://http://moodle.hsr.ch/', 'images/panther.png', ['comment2', 'blabla2', 'haligali2']);
+    linkList.push(newLink21);
+
+	var newLink22 = new newLink('Do dogs of one breed prefer to be with their own breed?', 'https://www.google.ch', 'images/husky.png', ['comment1', 'blabla1', 'haligali1']);
+    linkList.push(newLink22);
+
+    var newLink23 = new newLink('Mooooodle', 'http://http://moodle.hsr.ch/', 'images/bunny.png', ['comment2', 'blabla2', 'haligali2']);
+    linkList.push(newLink23);
+
+	var newLink24 = new newLink('We are candidates for the Pirate Party in Denmark. Do dogs of one breed prefer to be with their own breed? Do dogs of one breed prefer to be with their own breed?', 'https://www.google.ch', 'images/panther.png', ['comment1', 'blabla1', 'haligali1']);
+    linkList.push(newLink24);
+
+    var newLink25 = new newLink('Do dogs of one breed prefer to be with their own breed?','http://http://moodle.hsr.ch/', 'images/husky.png',['comment2', 'blabla2', 'haligali2']);
+    linkList.push(newLink25);
+
+	var newLink26 = new newLink('Gooooooogle','https://www.google.ch', 'images/bunny.png', ['comment1', 'blabla1', 'haligali1']);
+    linkList.push(newLink26);
+
+    var newLink27 = new newLink('We are candidates for the Pirate Party in Denmark. Do dogs of one breed prefer to be with their own breed? Do dogs of one breed prefer to be with their own breed?', 'http://http://moodle.hsr.ch/', 'images/panther.png', ['comment2', 'blabla2', 'haligali2']);
+    linkList.push(newLink27);
+
+	var newLink28 = new newLink('Gooooooogle','https://www.google.ch', 'images/husky.png', ['comment1', 'blabla1', 'haligali1']);
+    linkList.push(newLink28);
+
+    var newLink29 = new newLink('We are candidates for the Pirate Party in Denmark. Do dogs of one breed prefer to be with their own breed? ', 'http://http://moodle.hsr.ch/', 'images/bunny.png', ['comment2', 'blabla2', 'haligali2']);
+    linkList.push(newLink29);
+
+	var newLink30 = new newLink('Gooooooogle', 'https://www.google.ch', 'images/panther.png', ['comment1', 'blabla1', 'haligali1']);
+    linkList.push(newLink30);
+
+    var newLink31 = new newLink('Do dogs of one breed prefer to be with their own breed?','http://http://moodle.hsr.ch/', 'images/husky.png', ['Soddom & Gomorroha', 'Heitere Fahne', 'Immer diese Kommentare, das kann einem ja echt auf den Sack gehen', 'Jetzt aber mal halblang']);
+    linkList.push(newLink31);
+
     loadLinkData(linkList);
 };
