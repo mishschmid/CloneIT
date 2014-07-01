@@ -360,7 +360,7 @@ var loadTestData = function() {
 	var newLink30 = new newLink('Gooooooogle', 'https://www.google.ch', 'images/panther.png', ['comment1', 'blabla1', 'haligali1']);
     linkList.push(newLink30);
 
-    var newLink31 = new newLink('Do dogs of one breed prefer to be with their own breed?','http://http://moodle.hsr.ch/', 'images/husky.png', ['Soddom & Gomorroha', 'Heitere Fahne', 'Immer diese Kommentare, das kann einem ja echt auf den Sack gehen', 'Jetzt aber mal halblang']);
+    var newLink31 = new newLink('Simone hallo?','http://http://moodle.hsr.ch/', 'images/husky.png', ['Soddom & Gomorroha', 'Heitere Fahne', 'Immer diese Kommentare, das kann einem ja echt auf den Sack gehen', 'Jetzt aber mal halblang']);
     linkList.push(newLink31);
 
     loadLinkData(linkList);
