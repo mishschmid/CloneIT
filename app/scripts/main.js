@@ -168,7 +168,7 @@ var deletePost = function (e) {
 
 	//Step up to the respective post-container, first hide and then delete it
     $(e.currentTarget).parent().parent().parent().hide(200, function(){$('#container').isotope('remove', e.currentTarget);});
-    setTimeout (function(){$('#container').isotope( 'layout' );},201);
+    reloadLayout();
 };
 
 
