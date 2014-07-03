@@ -23,7 +23,6 @@ function newLink (text, link, picurl, comment) {
 // ISOTOPE LAYOUT - Initialize the Isotope layout
 //***********************************************
 $(document).ready(function () {
-    setTimeout(function(){
     var $container = $('#container');
 		// init
         $container.isotope({
@@ -33,7 +32,6 @@ $(document).ready(function () {
                 columnWidth: 0
             }
         });
-    },500);
     });
 
 
@@ -250,7 +248,6 @@ $(document).ready(function(){
 		e.preventDefault();
 		setActiveStyleSheet('default');
 	});
-
 	$('#usa').on('click', function(e){
 		e.preventDefault();
 		setActiveStyleSheet('usa');
