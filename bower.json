@@ -1,10 +1,11 @@
 {
-  "name": "cas-fee-cloneit3",
-  "private": true,
-  "dependencies": {
-    "modernizr": "~2.6.2",
-    "jquery": "~1.11.0",
-    "foundation": "~5.2.3"
-  },
-  "devDependencies": {}
+	"name": "cas-fee-cloneit3",
+	"private": true,
+	"dependencies": {
+		"modernizr": "~2.6.2",
+		"jquery": "~1.11.0",
+		"foundation": "~5.2.3",
+		"isotope": "~2.0.0"
+	},
+	"devDependencies": {}
 }
