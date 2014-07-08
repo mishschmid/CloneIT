@@ -173,9 +173,16 @@ var deletePost = function (e) {
 //***********************************************
 // ADD COMMENT BY KEY - Keyhandler for "enter"-key to add comment
 //***********************************************
-var addCommentbyKey = function(e){
+var addbyKey = function(e){
     if (event.which == 13) {
-        postComment(e);
+        if (e.currentTarget.id == 'link-input' || e.currentTarget.id == 'text-input') {
+            generateNewLink();
+        }
+        else{
+            postComment(e);
+        }
+
+
     }
 };
 
@@ -231,7 +238,8 @@ $(document).ready(function(){
     $('a[data-function="delete"]').on('click', deletePost);
 
 //5. KEY HANDLER FOR ADDING A COMMENT
-    $('input').on('keydown', addCommentbyKey);
+    $('input').on('keydown', addbyKey);
+   // $('link-input').on('keydown', generateNewLink);
 
 //6. UPVOTING
     $('a[data-function="upvote"]').on('click', voteUp);
