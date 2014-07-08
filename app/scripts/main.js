@@ -173,9 +173,9 @@ var deletePost = function (e) {
 //***********************************************
 // ADD COMMENT BY KEY - Keyhandler for "enter"-key to add comment
 //***********************************************
-var addCommentbyKey = function(){
+var addCommentbyKey = function(e){
     if (event.which == 13) {
-        postComment(e.currentTarget);
+        postComment(e);
     }
 };
 
