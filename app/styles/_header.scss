@@ -1,21 +1,23 @@
 //HEADER
 //**********************************************************************************************************************
 
-//}
 header {
 	max-width: 1000px;
 	margin: 0 auto;
 }
 
-//li.filter.block-grid {
-//	padding: 0;
-//}
+#filters {
+  margin-bottom: 1em;
+  .filter-item {
+    padding: 0;
+  }
+}
 
-.filter, .links-sidebar {
+.filter-item, .links-sidebar {
 	font-weight: 600;
 	text-transform: uppercase;
 	border: 1px solid #444444;
-	box-shadow: 1px 1px rgba(34, 30, 34, 0.25);
+//	box-shadow: 1px 1px rgba(34, 30, 34, 0.25);
 	a {
 		color: $sixth-color;
 		width: 100%;
@@ -121,11 +123,5 @@ header {
 	width: 56px;
 }
 
-li.filter {
-	padding: 0;
-}
 
-#filters {
-	margin-bottom: 1em;
-}
 

@@ -1,10 +1,11 @@
-
+// Bower Components Normalize
 @import "../bower_components/foundation/scss/normalize";
 
+// Foundation Includes
 @import "foundation";
 @import "settings";
 
-//Own Stylesheets
+// Own Stylesheets
 @import "layout";
 @import "header";
 @import "modules";
@@ -12,7 +13,8 @@
 @import "helpers";
 @import "icontfont";
 
-//@import "development";
+// Development Helpers
+// @import "development";
 
 
 // Or selectively include components
