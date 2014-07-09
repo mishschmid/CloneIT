@@ -5,7 +5,8 @@
 		"modernizr": "~2.7.2",
 		"jquery": "~2.1.0",
 		"foundation": "~5.2.3",
-		"isotope": "~2.0.0"
+		"isotope": "~2.0.0",
+        "imagesloaded": "~3.1.8"
 	},
 	"devDependencies": {}
 }
