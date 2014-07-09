@@ -119,7 +119,7 @@ var generateNewLink = function generateNewLink() {
 		alert("Please fill out all fields");
 
 	} else {
-		var link = new newLink($('#text-input').val(), $('#link-input').val());
+		var link = new newLink($('#text-input').val(), $('#link-input').val(), 'images/panther.png', new Array());
 		linkList.push(link);
 		loadLinkData(linkList);
 	}
@@ -143,7 +143,7 @@ var loadLinkData = function (linkList) {
 		}
 
 
-		var $clone = $('#template-post').clone();
+		var $clone = $('#template-post').clone(true);
 		$clone.attr('id', i);
 		$clone.addClass(background_list[background_counter]);
 		$clone.find('.post-title').text(linkList[i].text);
