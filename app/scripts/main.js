@@ -1,4 +1,8 @@
 'use strict';
+//jQuery.noConflict();
+
+//(function( $ ) {
+
 
 //TODO: Change global scope of variables
 //***********************************************
@@ -105,7 +109,7 @@ var loadLinkData = function (linkList) {
             backgroundCounter = 0;
         }
 
-        var $clone = $('#template-post').clone();
+        var $clone = $('#template-post').clone(true);
         $clone.attr('id', i);
         $clone.addClass(backgroundList[backgroundCounter]);
         $clone.find('.post-title').text(linkList[i].text);
@@ -140,7 +144,7 @@ var generateNewLink = function () {
         alert('Please fill out all fields');
 
     } else {
-        var link = new newLink($('#text-input').val(), $('#link-input').val());
+        var link = new newLink($('#text-input').val(), $('#link-input').val(), 'images/panther.png', new Array());
         linkList.push(link);
         loadLinkData(linkList);
     }
@@ -161,10 +165,16 @@ var deletePost = function (e) {
 //***********************************************
 // ADD COMMENT BY KEY - Keyhandler for "enter"-key to add comment
 //***********************************************
-var addCommentbyKey = function (e) {
-    if (event.which === 13) {
-        postComment(e.currentTarget);
-    }
+        var addByKey = function (e) {
+            if (event.which == 13) {
+                if (e.currentTarget.id == 'link-input' || e.currentTarget.id == 'text-input') {
+                    generateNewLink();
+                }
+                else {
+                    postComment(e);
+                }
+
+            }
 };
 
 
@@ -216,7 +226,7 @@ $(document).ready(function () {
     $('a[data-function="delete"]').on('click', deletePost);
 
 // 5. KEY HANDLER FOR ADDING A COMMENT
-    $('input').on('keydown', addCommentbyKey);
+    $('input').on('keydown', addByKey);
 
 // 6. UPVOTING
     $('a[data-function="upvote"]').on('click', voteUp);
@@ -262,3 +272,4 @@ $(document).ready(function () {
 
 loadTestData();
 $(document).foundation();
+//})(jQuery);
