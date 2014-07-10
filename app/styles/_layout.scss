@@ -2,7 +2,6 @@
 //**********************************************************************************************************************
 
 * {
-
 	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
 	-moz-box-sizing: border-box; /* Firefox, other Gecko */
 	box-sizing: border-box;
@@ -14,9 +13,7 @@
 
 body {
 	font-family: 'Open Sans', sans-serif;
-//	background-color: $secondary-color;
 	background-color: white;
-
 }
 
 p {
@@ -48,37 +45,3 @@ a {
 		width: 20%;
 	}
 }
-//.post {
-//	&.first-bg {
-//		background-color: $primary-bg-color;
-//	}
-//	&.second-bg {
-//		background-color: $secondary-bg-color;
-//	}
-//	&.third-bg {
-//		background-color: $third-bg-color;
-//	}
-//	&.fourth-bg {
-//		background-color: $fourth-bg-color;
-//	}
-//	&.fifth-bg {
-//		background-color: $fifth-bg-color;
-//	}
-//	&.sixth-bg {
-//		background-color: $sixth-bg-color;
-//	}
-//	&.seventh-bg {
-//		background-color: $seventh-bg-color;
-//	}
-//	&.eighth-bg {
-//		background-color: $eighth-bg-color;
-//	}
-//	&.ninth-bg {
-//		background-color: $ninth-bg-color;
-//	}
-//	&.tenth-bg {
-//		background-color: $tenth-bg-color;
-//	}
-//}
-
-
