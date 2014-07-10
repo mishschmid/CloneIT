@@ -27,9 +27,7 @@ var Post = function (text, link, picurl, comments) {
 // RELOAD LAYOUT - Reorder #container-div elements
 //****************************************************
 var reloadLayout = function () {
-    setTimeout(function () {
-        $('#container').isotope('reloadItems').isotope({sortBy: 'original-order'});
-    }, 201);
+	$('#container').isotope('reloadItems').isotope({sortBy: 'original-order'});
 };
 
 
@@ -52,11 +50,11 @@ var showComments = function (postID) {
 //***********************************************
 // TOGGLE COMMENTS - Show/hide the comments-div
 //***********************************************
-// TODO: Check if comments container can be targeted with a class instead of an element
 // Step down the DOM to the next children div & toggle the selected div (comments-container)
 var toggleComments = function (postID) {
-    $('#' + postID).children('div').toggle(200);
-    reloadLayout();
+    $('#' + postID).find('.comments-container').toggle(200, function (){
+	    reloadLayout();
+    });
 };
 
 
@@ -130,8 +128,7 @@ var generatePost = function () {
     // Check if all fields are filled out
     var failed = false;
 
-    // TODO: Check if there is a simpler selection for it
-    $('#big-nav input').each(function () {
+    $('#text-input, #link-input').each(function () {
         if ($(this).val() === '') {
             failed = true;
         }
@@ -153,9 +150,8 @@ var generatePost = function () {
 //***********************************************
 var deletePost = function (e) {
     $(e.currentTarget).closest('.post').hide(200, function () {
-        $('#container').isotope('remove', e.currentTarget);
+        $('#container').isotope('remove', e.currentTarget).isotope('reloadItems').isotope({sortBy: 'original-order'});
     });
-    reloadLayout();
 };
 
 
@@ -163,8 +159,8 @@ var deletePost = function (e) {
 // ADD COMMENT BY KEY - Keyhandler for "enter"-key to add comment
 //***********************************************
 var addByKey = function (e) {
-    if (event.which == 13) {
-        if (e.currentTarget.id == 'link-input' || e.currentTarget.id == 'text-input') {
+    if (event.which === 13) {
+        if (e.currentTarget.id === 'link-input' || e.currentTarget.id === 'text-input') {
             generatePost();
         }
         else {
