@@ -3,10 +3,25 @@
 (function( $ ) {
 
 //***********************************************
-// GLOBAL VARIABLES
+// DEFINING LOCAL SCOPE VARIABLES
 //***********************************************
 var postList = [];
 var currentLoadCount = 0;
+
+
+//***********************************************
+// ISOTOPE LAYOUT - Initialization
+//***********************************************
+$(document).ready(function () {
+    var $container = $('#container');
+    // init
+    $container.isotope({
+        itemSelector: '.item',
+        masonry: {
+            columnWidth: 1
+        }
+    });
+});
 
 
 //***********************************************
@@ -22,7 +37,7 @@ var Post = function (text, link, picurl, comments) {
     this.comments = comments || [];
 };
 
-    
+
 //****************************************************
 // RELOAD LAYOUT - Reorder #container-div elements
 //****************************************************
@@ -242,22 +257,6 @@ $(document).ready(function () {
     $('#marine').on('click', function(e){
         e.preventDefault();
         setActiveStyleSheet('marine');
-    });
-});
-
-
-//***********************************************
-// ISOTOPE LAYOUT - Initialization
-//***********************************************
-$(document).ready(function () {
-    var $container = $('#container');
-    // init
-    $container.isotope({
-        // options
-        itemSelector: '.item',
-        masonry: {
-            columnWidth: 0
-        }
     });
 });
 
