@@ -1,4 +1,4 @@
-//Some general overall style setting used troughout the whole project
+//Some general overall style setting used throughout the whole project
 //**********************************************************************************************************************
 
 * {
@@ -31,17 +31,21 @@ a {
 	}
 }
 
-.item {
+.item, .masonry-width {
 	width: 100%;
 	min-width: 200px;
 
-	@media (min-width: 415px) {
-		width: 49.98%;
+	@media (min-width: 401px) {
+		width: 50%;
 	}
-	@media (min-width: 615px) {
-		width: 32.96%;
+	@media (min-width: 601px) {
+		width: 33%;
 	}
 	@media (min-width: 1000px) {
-		width: 19.96%;
+		width: 20%;
 	}
+}
+
+.masonry-width {
+	display: block;
 }
