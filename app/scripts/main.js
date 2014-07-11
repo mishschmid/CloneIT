@@ -8,22 +8,6 @@
 var postList = [];
 var currentLoadCount = 0;
 
-
-//***********************************************
-// ISOTOPE LAYOUT - Initialization
-//***********************************************
-$(document).ready(function () {
-    var $container = $('#container');
-    // init
-    $container.isotope({
-        itemSelector: '.item',
-        masonry: {
-            columnWidth: 1
-        }
-    });
-});
-
-
 //***********************************************
 // NEW LINK - Definition of "Post" object
 //***********************************************
@@ -37,6 +21,20 @@ var Post = function (text, link, picurl, comments) {
     this.comments = comments || [];
 };
 
+//***********************************************
+// ISOTOPE LAYOUT - Initialization
+//***********************************************
+
+var initIsotopeLayout = function(){
+        var $container = $('#container');
+        // init
+        $container.isotope({
+            itemSelector: '.item',
+            masonry: {
+                columnWidth: 1
+            }
+        });
+    };
 
 //****************************************************
 // RELOAD LAYOUT - Reorder #container-div elements
@@ -220,6 +218,9 @@ var showNavigation = function () {
 //***********************************************
 $(document).ready(function () {
 
+//0. Init Layout
+    initIsotopeLayout();
+
 // 1. GENERATE NEW LINK WITH TITLE AND ADD IT ON THE TOP OF THE FEED
     $('#new-link').on('click',generatePost);
 
@@ -258,6 +259,7 @@ $(document).ready(function () {
         e.preventDefault();
         setActiveStyleSheet('marine');
     });
+    loadTestData();
 });
 
 
@@ -360,7 +362,4 @@ $(document).ready(function () {
 
         loadLinkData(postList);
     };
-
-loadTestData();
-
 })(jQuery);
