@@ -1,8 +1,7 @@
-//Some general overall style setting used throughout the whole project
+// SOME REUSABLE ITEMS
 //**********************************************************************************************************************
 
 .post {
-	//  margin: 20px 0;
 	border: 1px solid $fifth-color;
 	padding: 5px;
 	background-color: $primary-color;
@@ -123,7 +122,6 @@ a.post-pic {
 		height: 40px;
 		font-size: 1em;
 	}
-//	background-color: $primary-color;
 	&.columns {
 		padding: 0;
 		margin-top: 4px;
